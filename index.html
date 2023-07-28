@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .sidc-main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidc-topbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,102,48,1) 52%, rgba(0,102,51,1) 100%);
+
+        height: 4.5rem;
+        padding: 0 20px;
+        z-index: 2;
+    }
+    
+    .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-link {
+        padding: 0 10px;
+        list-style: none;
+        color: #ffffff8c;
+        font-weight: 300;
+        
+        transition: color 200ms ease-in;
+
+        cursor: pointer;
+    }
+
+    .nav-link:hover{
+        color: #ffffffda;
+    }
+
+    .section {
+        position: relative;
+
+        height: 100vh;
+        width: 100%;
+
+        height: calc(100vh - 4.5rem);
+        top: 4.5rem;
+    }
+
+    .section2 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    #sidc-video {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+
+        object-fit: fill;
+    }
+
+    @media (max-width: 976px){
+        .nav-links {
+            display: none;
+        }
+    }
+
+    @media (max-width: 768px){
+        #sidc-video {
+            object-fit: cover;
+        }
+    }
+
+
+    
+</style>
+<body>
+    <main class="sidc-main">
+        <nav class="sidc-topbar">
+            <div class="sidc-logo">
+                <img src="asset/logo/sidc-logo.png" alt="jologs">
+            </div>
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li class="nav-link"><a href="#"></a>Home</li>
+                    <li class="nav-link"><a href="#"></a>SIDC</li>
+                    <li class="nav-link"><a href="#"></a>Membership</li>
+                    <li class="nav-link"><a href="#"></a>Careers</li>
+                    <li class="nav-link"><a href="#"></a>Offerings</li>
+                    <li class="nav-link"><a href="#"></a>Contact</li>
+                </ul>
+            </div>
+        </nav>
+        <section class="section section1">
+            <video autoplay muted loop id="sidc-video">
+                <source src="https://cdn.sidc.coop/assets/app/Video/anniversary.mp4" type="video/mp4">
+              </video>
+        </section>
+
+        <section class="section section2">
+          <article class="section2-typhograpy">
+            <h1 class="sidc-title">Sorosoro Ibaba Development Cooperative (SIDC)</h1>
+            <p class="sidc-description">
+                Sorosoro Ibaba Development Cooperative (SIDC) is first established as Sorosoro Ibaba Farmers' Association in March 19, 1969, thru Mr. Victoriano E. Barte. The association was funded initially by 59 members and as of December 2021, the cooperative has 32,936 regular members and 20,568 associate members.
+                <br>
+                SIDC grows to a Coorporative providing with a sustainable Lifecycle in Agriculture, Financial Services, Retail and Wholesale as well in Ecotourism -all with participation on their Members.
+                <br>
+                Be a Part of SIDC Sorosoro Ibaba Development Cooperative and benefit from the Community.
+            </p>
+          </article>
+        </section>
+    </main>
+    
+</body>
+</html>
